@@ -69,4 +69,28 @@ class BooksSearch extends Component {
   }
 }
 
+const BooksSearchBar = props => (
+  <div>BooksSearchBar</div>
+)
+
+class BooksSearchClose extends Component {
+  render() {
+    return (
+      <div>BooksSearchClose</div>
+    )
+  }
+}
+
+class BooksSearchInput extends Component {
+  render() {
+    return (
+      <div>BooksSearchInput</div>
+    )
+  }
+}
+
+const BooksSearchResults = props => (
+  <div>BooksSearchResults</div>
+)
+
 export default BooksApp
