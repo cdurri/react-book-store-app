@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 // import * as BooksAPI from './BooksAPI'
 import './App.css'
 
-class BooksApp extends React.Component {
+class BooksApp extends Component {
   state = {
     /**
      * TODO: Instead of using this state variable to keep track of which page
@@ -16,6 +16,55 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div>Books</div>
+
+    )
+  }
+}
+
+class BooksList extends Component {
+  render() {
+    return (
+      <div>BooksList</div>
+    )
+  }
+}
+
+class BookShelf extends Component {
+  render() {
+    return (
+      <div>BookShelf</div>
+    )
+  }
+}
+
+const BookShelfBooks = props => (
+  <div>BookShelfBooks</div>
+)
+
+const Book = props  => (
+  <div>Book</div>
+)
+
+class BookMover extends Component {
+  render() {
+    return (
+      <div>BookMover</div>
+    )
+  }
+}
+
+class BookAddNew extends Component {
+  render() {
+    return (
+      <div>BookAddNew</div>
+    )
+  }
+}
+
+class BooksSearch extends Component {
+  render() {
+    return (
+      <div>BooksSearch</div>
     )
   }
 }
