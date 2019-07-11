@@ -15,8 +15,9 @@ class BooksApp extends Component {
 
   render() {
     return (
-      <div>Books</div>
-
+      <div className='app'>
+        <BooksList />
+      </div>
     )
   }
 }
@@ -24,39 +25,84 @@ class BooksApp extends Component {
 class BooksList extends Component {
   render() {
     return (
-      <div>BooksList</div>
+      <div className='list-books'>
+        <div className='list-books-title'>
+          <h1>MyReads</h1>
+        </div>
+        <BookShelves />
+        <OpenSearch />
+      </div>
     )
   }
 }
 
-class BookShelf extends Component {
-  render() {
-    return (
-      <div>BookShelf</div>
-    )
-  }
-}
+const BookShelves = props => (
+  <div className='list-books-content'>
+    <BookShelf />
+  </div>
+)
+
+const BookShelf = props => (
+  <div>
+    <div className='bookshelf'>
+      <h2 className='bookshelf-title'>Currently Reading</h2>
+      <BookShelfBooks />
+    </div>
+    <div className='bookshelf'>
+      <h2 className='bookshelf-title'>Want to Read</h2>
+      <BookShelfBooks />
+    </div>
+    <div className='bookshelf'>
+      <h2 className='bookshelf-title'>Read</h2>
+      <BookShelfBooks />
+    </div>
+  </div>
+)
 
 const BookShelfBooks = props => (
-  <div>BookShelfBooks</div>
+  <div className='bookshelf-books'>
+    <ol className='books-grid'>
+      <Book />
+      <Book />
+    </ol>
+  </div>
 )
 
 const Book = props  => (
-  <div>Book</div>
+  <li>
+    <div className='book'>
+      <div className='book-top'>
+        <div className='book-cover' style={{ width: 128, height: 193, backgroundImage: 'url("http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73-GnPVEyb7MOCxDzOYF1PTQRuf6nCss9LMNOSWBpxBrz8Pm2_mFtWMMg_Y1dx92HT7cUoQBeSWjs3oEztBVhUeDFQX6-tWlWz1-feexS0mlJPjotcwFqAg6hBYDXuK_bkyHD-y&source=gbs_api")' }}></div>
+        <BookShelfChanger />
+      </div>
+      <div className="book-title">To Kill a Mockingbird</div>
+      <div className="book-authors">Harper Lee</div>
+    </div>
+  </li>
 )
 
-class BookMover extends Component {
+class BookShelfChanger extends Component {
   render() {
     return (
-      <div>BookMover</div>
+      <div className="book-shelf-changer">
+        <select>
+          <option value="move" disabled>Move to...</option>
+          <option value="currentlyReading">Currently Reading</option>
+          <option value="wantToRead">Want to Read</option>
+          <option value="read">Read</option>
+          <option value="none">None</option>
+        </select>
+      </div>
     )
   }
 }
 
-class BookAddNew extends Component {
+class OpenSearch extends Component {
   render() {
     return (
-      <div>BookAddNew</div>
+      <div className="open-search">
+        <button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button>
+      </div>
     )
   }
 }
@@ -64,19 +110,25 @@ class BookAddNew extends Component {
 class BooksSearch extends Component {
   render() {
     return (
-      <div>BooksSearch</div>
+      <div className='search-books'>
+        <BooksSearchBar />
+        <BooksSearchResults />
+      </div>
     )
   }
 }
 
 const BooksSearchBar = props => (
-  <div>BooksSearchBar</div>
+  <div className='search-books-bar'>
+    <BooksSearchClose />
+    <BooksSearchInput />
+  </div>
 )
 
 class BooksSearchClose extends Component {
   render() {
     return (
-      <div>BooksSearchClose</div>
+      <button className='close-search' onClick={() => this.setState({ showSearchPage: false })}>Close</button>
     )
   }
 }
@@ -84,13 +136,25 @@ class BooksSearchClose extends Component {
 class BooksSearchInput extends Component {
   render() {
     return (
-      <div>BooksSearchInput</div>
+      <div className="search-books-input-wrapper">
+        {/*
+          NOTES: The search from BooksAPI is limited to a particular set of search terms.
+          You can find these search terms here:
+          https://github.com/udacity/reactnd-project-myreads-starter/blob/master/SEARCH_TERMS.md
+
+          However, remember that the BooksAPI.search method DOES search by title or author. So, don't worry if
+          you don't find a specific author or title. Every search is limited by search terms.
+        */}
+        <input type="text" placeholder="Search by title or author"/>
+      </div>
     )
   }
 }
 
 const BooksSearchResults = props => (
-  <div>BooksSearchResults</div>
+  <div className='search-books-results'>
+    <ol className='books-gris'></ol>
+  </div>
 )
 
 export default BooksApp
