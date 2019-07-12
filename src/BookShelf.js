@@ -3,7 +3,6 @@ import Book from './Book';
 
 const BookShelf = props => (
   <div>
-    {/*{console.log(props.shelfkeys)}*/}
     {props.shelves.map((shelf, index) => {
       return (
         <div className='bookshelf' id={props.shelfkeys[index]}>
