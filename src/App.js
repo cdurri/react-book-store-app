@@ -9,17 +9,33 @@ const shelves = ['Currently Reading', 'Want to Read', 'Read'];
 const shelfkeys = ['currentlyReading', 'wantToRead', 'read'];
 
 class BooksApp extends Component {
-  
+
   state = {
-    books: []
+    booksList: [],
+    booksSearch: [],
+    query: ''
   }
 
   componentDidMount() {
     BooksAPI.getAll().then(data => {
       this.setState({
-        books: data
+        booksList: data
       })
     })
+  }
+
+  booksSearch = query => {
+    if(query != '') {
+      BooksAPI.search(query).then(data => {
+        this.setState({
+          booksSearch: data
+        })
+      })
+    } else {
+      this.setState({
+        booksSearch: []
+      })
+    }
   }
 
   // raise the state to here
@@ -29,11 +45,12 @@ class BooksApp extends Component {
   render() {
     return (
       <div className='app'>
+      {console.log('BookSearch', this.state.booksSearch)}
         <Route exact path='/' render={() => (
-          <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.books} />
+          <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} />
         )} />
         <Route path='/books-search' render={() => (
-          <BooksSearch />
+          <BooksSearch books={this.state.booksSearch} search={this.booksSearch} />
         )} />
       </div>
     )

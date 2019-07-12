@@ -5,7 +5,7 @@ import BooksSearchInput from './BooksSearchInput';
 const BooksSearchBar = props => (
   <div className='search-books-bar'>
     <BooksSearchClose />
-    <BooksSearchInput />
+    <BooksSearchInput search={props.search} />
   </div>
 )
 
