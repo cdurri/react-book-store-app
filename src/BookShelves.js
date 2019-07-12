@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import BookShelf from './BookShelf';
-import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from './BooksAPI';
+
+const shelves = ['Currently Reading', 'Want to Read', 'Read'];
+const shelfkeys = ['currentlyReading', 'wantToRead', 'read'];
 
 class BookShelves extends Component  {
+
   state = {
-    shelves: ['Currently Reading', 'Want to Read', 'Read'],
     books: []
   }
 
@@ -19,7 +22,7 @@ class BookShelves extends Component  {
   render() {
     return (
       <div className='list-books-content'>
-        <BookShelf shelves={this.state.shelves} books={this.state.books} />
+        <BookShelf shelves={shelves} shelfkeys={shelfkeys} books={this.state.books} />
       </div>
     )
   }

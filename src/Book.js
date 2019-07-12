@@ -2,7 +2,9 @@ import React from 'react';
 import BookShelfChanger from './BookShelfChanger';
 
 const Book = props  => (
-  props.books.map(book => {
+  props.books.filter(book => book.shelf === props.shelfkey)
+  .map(book => {
+    console.log(props.shelfkey)
     return (
       <li>
         <div className='book'>

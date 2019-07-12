@@ -10,6 +10,10 @@ class BooksApp extends Component {
 
   }
 
+  // raise the state to here
+  // componentDidMount to here
+  // have handle methods in here
+
   render() {
     return (
       <div className='app'>

@@ -3,9 +3,11 @@ import BooksSearchBar from './BooksSearchBar';
 import BooksSearchResults from './BooksSearchResults';
 
 class BooksSearch extends Component {
-  state = {
+  /*state = {
 
-  }
+  }*/
+
+  // pass the state from App.js to props for this 
 
   render() {
     return (
