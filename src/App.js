@@ -38,6 +38,17 @@ class BooksApp extends Component {
     }
   }
 
+  shelfUpdate = (book, shelf) => {
+    BooksAPI.update(book, shelf).then(data => {
+      console.log('shelfUpdate', data);
+    })
+    BooksAPI.getAll().then(data => {
+      this.setState({
+        booksList: data
+      })
+    })
+  }
+
   // raise the state to here
   // componentDidMount to here
   // have handle methods in here
@@ -47,7 +58,7 @@ class BooksApp extends Component {
       <div className='app'>
       {console.log('BookSearch', this.state.booksSearch)}
         <Route exact path='/' render={() => (
-          <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} />
+          <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} shelfupdate={this.shelfUpdate} />
         )} />
         <Route path='/books-search' render={() => (
           <BooksSearch books={this.state.booksSearch} search={this.booksSearch} />

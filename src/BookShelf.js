@@ -9,7 +9,7 @@ const BookShelf = props => (
           <h2 className='bookshelf-title'>{shelf}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">
-              <Book shelf={shelf} shelfkey={props.shelfkeys[index]} books={props.books} />
+              <Book shelf={shelf} shelfkey={props.shelfkeys[index]} books={props.books} shelfupdate={props.shelfupdate} />
             </ol>
           </div>
         </div>

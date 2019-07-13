@@ -7,7 +7,7 @@ const BooksList = props => (
     <div className='list-books-title'>
       <h1>MyReads</h1>
     </div>
-    <BookShelves shelves={props.shelves} shelfkeys={props.shelfkeys} books={props.books} />
+    <BookShelves shelves={props.shelves} shelfkeys={props.shelfkeys} books={props.books} shelfupdate={props.shelfupdate} />
     <OpenSearch />
   </div>
 )
