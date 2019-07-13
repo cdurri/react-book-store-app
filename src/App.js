@@ -41,12 +41,13 @@ class BooksApp extends Component {
   shelfUpdate = (book, shelf) => {
     BooksAPI.update(book, shelf).then(data => {
       console.log('shelfUpdate', data);
-    })
-    BooksAPI.getAll().then(data => {
-      this.setState({
-        booksList: data
+      BooksAPI.getAll().then(data => {
+        this.setState({
+          booksList: data
+        })
       })
     })
+
   }
 
   // raise the state to here
@@ -61,7 +62,7 @@ class BooksApp extends Component {
           <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} shelfupdate={this.shelfUpdate} />
         )} />
         <Route path='/books-search' render={() => (
-          <BooksSearch books={this.state.booksSearch} search={this.booksSearch} />
+          <BooksSearch books={this.state.booksSearch} search={this.booksSearch} shelfupdate={this.shelfUpdate} />
         )} />
       </div>
     )

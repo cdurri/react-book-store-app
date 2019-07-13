@@ -1,24 +1,6 @@
 import React, { Component } from 'react';
 
 class BooksSearchInput extends Component {
-  // state = {
-  //   query: ''
-  // }
-  //
-  // updateQuery = query => {
-  //   this.setState(() => ({
-  //     query: query.trim()
-  //   }))
-  // }
-
-  // BooksAPI.search('Art').then(data => {
-  //   this.setState({
-  //     booksSearch: data
-  //   })
-  // })
-
-
-
   render() {
     return (
       <div className="search-books-input-wrapper">

@@ -6,7 +6,7 @@ const BooksSearch = props => (
   // pass the state from App.js to props for this
   <div className='search-books'>
     <BooksSearchBar search={props.search} />
-    <BooksSearchResults books={props.books} />
+    <BooksSearchResults books={props.books} shelfupdate={props.shelfupdate} />
   </div>
 )
 
