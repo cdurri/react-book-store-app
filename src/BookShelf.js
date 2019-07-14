@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Book from './Book';
 
-const BookShelf = ({ shelves, shelfkeys, books, shelfupdate }) => (
+const BookShelf = ({ shelves, shelfkeys, books, shelfupdate, selectupdate }) => (
   <div>
     {shelves.map((shelf, index) => {
       return (
@@ -10,7 +10,7 @@ const BookShelf = ({ shelves, shelfkeys, books, shelfupdate }) => (
           <h2 className='bookshelf-title'>{shelf}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">
-              <Book shelf={shelf} shelfkey={shelfkeys[index]} books={books} shelfupdate={shelfupdate} />
+              <Book shelf={shelf} shelfkey={shelfkeys[index]} books={books} shelfupdate={shelfupdate} selectupdate={selectupdate} />
             </ol>
           </div>
         </div>

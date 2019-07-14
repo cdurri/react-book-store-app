@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import BooksSearchBar from './BooksSearchBar';
 import BooksSearchResults from './BooksSearchResults';
 
-const BooksSearch = ({ search, books, shelfupdate }) => (
+const BooksSearch = ({ search, books, shelfupdate, value, selectupdate }) => (
   <div className='search-books'>
     <BooksSearchBar search={search} />
-    <BooksSearchResults books={books} shelfupdate={shelfupdate} />
+    <BooksSearchResults books={books} shelfupdate={shelfupdate} value={value} selectupdate={selectupdate} />
   </div>
 )
 

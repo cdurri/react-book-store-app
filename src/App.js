@@ -13,7 +13,8 @@ class BooksApp extends Component {
   state = {
     booksList: [],
     booksSearch: [],
-    query: ''
+    query: '',
+    value: 'none'
   }
 
   componentDidMount() {
@@ -47,17 +48,22 @@ class BooksApp extends Component {
         })
       })
     })
+  }
 
+  selectUpdate = option => {
+    this.setState({
+      value: option
+    })
   }
 
   render() {
     return (
       <div className='app'>
         <Route exact path='/' render={() => (
-          <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} shelfupdate={this.shelfUpdate} />
+          <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} shelfupdate={this.shelfUpdate} selectupdate={this.selectUpdate} />
         )} />
         <Route path='/search' render={() => (
-          <BooksSearch books={this.state.booksSearch} search={this.booksSearch} shelfupdate={this.shelfUpdate} />
+          <BooksSearch books={this.state.booksSearch} search={this.booksSearch} shelfupdate={this.shelfUpdate} value={this.state.value} selectupdate={this.selectUpdate} />
         )} />
       </div>
     )

@@ -2,7 +2,7 @@ import React from 'react';
 import BookShelfChanger from './BookShelfChanger';
 import PropTypes from 'prop-types';
 
-const BooksSearchResults = ({ books, shelfupdate }) => (
+const BooksSearchResults = ({ books, shelfupdate, shelfkeys, value, selectupdate }) => (
   <div className='search-books-results'>
     <ol className='books-grid'>
       {books.length > 0 && (
@@ -12,7 +12,7 @@ const BooksSearchResults = ({ books, shelfupdate }) => (
             <div className='book'>
               <div className='book-top'>
                 <div className='book-cover' style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks && book.imageLinks.thumbnail})` }}></div>
-                <BookShelfChanger books={book} shelfupdate={shelfupdate} />
+                <BookShelfChanger books={book} shelfupdate={shelfupdate} value={value} selectupdate={selectupdate} />
               </div>
               <div className="book-title">{book.title}</div>
               <div className="book-authors">{book.authors}</div>

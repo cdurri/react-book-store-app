@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import BookShelves from './BookShelves';
 import OpenSearch from './OpenSearch';
 
-const BooksList = ({ shelves, shelfkeys, books, shelfupdate }) => (
+const BooksList = ({ shelves, shelfkeys, books, shelfupdate, selectupdate }) => (
   <div className='list-books'>
     <div className='list-books-title'>
       <h1>MyReads</h1>
     </div>
-    <BookShelves shelves={shelves} shelfkeys={shelfkeys} books={books} shelfupdate={shelfupdate} />
+    <BookShelves shelves={shelves} shelfkeys={shelfkeys} books={books} shelfupdate={shelfupdate} selectupdate={selectupdate} />
     <OpenSearch />
   </div>
 )

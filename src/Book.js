@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BookShelfChanger from './BookShelfChanger';
 
-const Book = ({ books, shelfkey, shelfupdate })  => (
+const Book = ({ books, shelfkey, shelfupdate, value, selectupdate })  => (
   books.filter(book => book.shelf === shelfkey)
   .map(book => {
     return (
@@ -10,7 +10,7 @@ const Book = ({ books, shelfkey, shelfupdate })  => (
         <div className='book'>
           <div className='book-top'>
             <div className='book-cover' style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
-            <BookShelfChanger books={book} shelfupdate={shelfupdate} />
+            <BookShelfChanger books={book} shelfupdate={shelfupdate} value={shelfkey} selectupdate={selectupdate} />
           </div>
           <div className="book-title">{book.title}</div>
           <div className="book-authors">{book.authors}</div>
