@@ -1,15 +1,15 @@
 import React from 'react';
 import BookShelfChanger from './BookShelfChanger';
 
-const Book = props  => (
-  props.books.filter(book => book.shelf === props.shelfkey)
+const Book = ({ books, shelfkey, shelfupdate })  => (
+  books.filter(book => book.shelf === shelfkey)
   .map(book => {
     return (
       <li>
         <div className='book'>
           <div className='book-top'>
             <div className='book-cover' style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
-            <BookShelfChanger books={book} shelfupdate={props.shelfupdate} />
+            <BookShelfChanger books={book} shelfupdate={shelfupdate} />
           </div>
           <div className="book-title">{book.title}</div>
           <div className="book-authors">{book.authors}</div>

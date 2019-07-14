@@ -2,10 +2,10 @@ import React from 'react';
 import BooksSearchBar from './BooksSearchBar';
 import BooksSearchResults from './BooksSearchResults';
 
-const BooksSearch = props => (
+const BooksSearch = ({ search, books, shelfupdate }) => (
   <div className='search-books'>
-    <BooksSearchBar search={props.search} />
-    <BooksSearchResults books={props.books} shelfupdate={props.shelfupdate} />
+    <BooksSearchBar search={search} />
+    <BooksSearchResults books={books} shelfupdate={shelfupdate} />
   </div>
 )
 

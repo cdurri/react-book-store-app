@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BooksSearchInput = props => (
+const BooksSearchInput = ({ search }) => (
   <div className="search-books-input-wrapper">
     {/*
       NOTES: The search from BooksAPI is limited to a particular set of search terms.
@@ -10,7 +10,7 @@ const BooksSearchInput = props => (
       However, remember that the BooksAPI.search method DOES search by title or author. So, don't worry if
       you don't find a specific author or title. Every search is limited by search terms.
     */}
-    <input type="text" placeholder="Search by title or author" onChange={(event) => props.search(event.target.value)} />
+    <input type="text" placeholder="Search by title or author" onChange={(event) => search(event.target.value)} />
   </div>
 )
 

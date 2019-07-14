@@ -1,15 +1,15 @@
 import React from 'react';
 import Book from './Book';
 
-const BookShelf = props => (
+const BookShelf = ({ shelves, shelfkeys, books, shelfupdate }) => (
   <div>
-    {props.shelves.map((shelf, index) => {
+    {shelves.map((shelf, index) => {
       return (
-        <div className='bookshelf' id={props.shelfkeys[index]}>
+        <div className='bookshelf' id={shelfkeys[index]}>
           <h2 className='bookshelf-title'>{shelf}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">
-              <Book shelf={shelf} shelfkey={props.shelfkeys[index]} books={props.books} shelfupdate={props.shelfupdate} />
+              <Book shelf={shelf} shelfkey={shelfkeys[index]} books={books} shelfupdate={shelfupdate} />
             </ol>
           </div>
         </div>

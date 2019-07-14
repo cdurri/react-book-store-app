@@ -2,10 +2,10 @@ import React from 'react';
 import BooksSearchClose from './BooksSearchClose';
 import BooksSearchInput from './BooksSearchInput';
 
-const BooksSearchBar = props => (
+const BooksSearchBar = ({ search }) => (
   <div className='search-books-bar'>
     <BooksSearchClose />
-    <BooksSearchInput search={props.search} />
+    <BooksSearchInput search={search} />
   </div>
 )
 
