@@ -3,7 +3,6 @@ import BookShelfChanger from './BookShelfChanger';
 
 const BooksSearchResults = props => (
   <div className='search-books-results'>
-  {console.log(props)}
     <ol className='books-grid'>
       { props.books.length > 0 && (
         props.books.map(book => {

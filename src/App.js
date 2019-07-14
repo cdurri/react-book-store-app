@@ -53,7 +53,6 @@ class BooksApp extends Component {
   render() {
     return (
       <div className='app'>
-      {console.log('BookSearch', this.state.booksSearch)}
         <Route exact path='/' render={() => (
           <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} shelfupdate={this.shelfUpdate} />
         )} />
