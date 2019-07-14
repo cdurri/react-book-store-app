@@ -21,8 +21,8 @@ const Book = ({ books, shelfkey, shelfupdate, value, selectupdate })  => (
 )
 
 Book.propTypes = {
-  shelfkey: PropTypes.array.isRequired,
-  books: PropTypes.object.isRequired,
+  shelfkey: PropTypes.string.isRequired,
+  books: PropTypes.array.isRequired,
   shelfupdate: PropTypes.func.isRequired
 }
 

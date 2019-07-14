@@ -11,7 +11,7 @@ const BooksSearch = ({ search, books, shelfupdate, value, selectupdate }) => (
 )
 
 BooksSearch.propTypes = {
-  search: PropTypes.string,
+  search: PropTypes.func,
   books: PropTypes.array.isRequired,
   shelfupdate: PropTypes.func.isRequired
 }

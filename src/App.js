@@ -41,7 +41,6 @@ class BooksApp extends Component {
 
   shelfUpdate = (book, shelf) => {
     BooksAPI.update(book, shelf).then(data => {
-      console.log('shelfUpdate', data);
       BooksAPI.getAll().then(data => {
         this.setState({
           booksList: data
