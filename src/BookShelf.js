@@ -6,7 +6,7 @@ const BookShelf = ({ shelves, shelfkeys, books, shelfupdate }) => (
   <div>
     {shelves.map((shelf, index) => {
       return (
-        <div className='bookshelf' id={shelfkeys[index]}>
+        <div className='bookshelf' key={shelf} id={shelfkeys[index]}>
           <h2 className='bookshelf-title'>{shelf}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">
