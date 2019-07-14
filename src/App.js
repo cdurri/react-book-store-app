@@ -50,10 +50,6 @@ class BooksApp extends Component {
 
   }
 
-  // raise the state to here
-  // componentDidMount to here
-  // have handle methods in here
-
   render() {
     return (
       <div className='app'>
@@ -61,7 +57,7 @@ class BooksApp extends Component {
         <Route exact path='/' render={() => (
           <BooksList shelves={shelves} shelfkeys={shelfkeys} books={this.state.booksList} shelfupdate={this.shelfUpdate} />
         )} />
-        <Route path='/books-search' render={() => (
+        <Route path='/search' render={() => (
           <BooksSearch books={this.state.booksSearch} search={this.booksSearch} shelfupdate={this.shelfUpdate} />
         )} />
       </div>
