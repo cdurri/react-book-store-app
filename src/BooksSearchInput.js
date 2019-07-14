@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const BooksSearchInput = ({ search }) => (
   <div className="search-books-input-wrapper">
@@ -13,5 +14,9 @@ const BooksSearchInput = ({ search }) => (
     <input type="text" placeholder="Search by title or author" onChange={(event) => search(event.target.value)} />
   </div>
 )
+
+BooksSearchInput.propTypes = {
+  search: PropTypes.func,
+}
 
 export default BooksSearchInput;

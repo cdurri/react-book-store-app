@@ -25,7 +25,7 @@ class BooksApp extends Component {
   }
 
   booksSearch = query => {
-    if(query != '') {
+    if(query !== '') {
       BooksAPI.search(query).then(data => {
         this.setState({
           booksSearch: data

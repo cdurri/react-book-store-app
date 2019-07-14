@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BooksSearchClose from './BooksSearchClose';
 import BooksSearchInput from './BooksSearchInput';
 
@@ -8,5 +9,9 @@ const BooksSearchBar = ({ search }) => (
     <BooksSearchInput search={search} />
   </div>
 )
+
+BooksSearchBar.propTypes = {
+  search: PropTypes.func,
+}
 
 export default BooksSearchBar;

@@ -1,5 +1,6 @@
 import React from 'react';
 import BookShelfChanger from './BookShelfChanger';
+import PropTypes from 'prop-types';
 
 const BooksSearchResults = ({ books, shelfupdate }) => (
   <div className='search-books-results'>
@@ -23,5 +24,10 @@ const BooksSearchResults = ({ books, shelfupdate }) => (
     </ol>
   </div>
 )
+
+BooksSearchResults.propTypes = {
+  books: PropTypes.array.isRequired,
+  shelfupdate: PropTypes.func.isRequired
+}
 
 export default BooksSearchResults;
