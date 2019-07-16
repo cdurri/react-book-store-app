@@ -12,6 +12,7 @@ and using Reacts **state management** functionality. The project includes a back
 
 To get started developing right away:
 
+* clone the project to your local machine using the following command on the command line: `git clone https://github.com/cdurri/react-myreads-app.git`
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
 
@@ -27,6 +28,17 @@ To get started developing right away:
 └── src
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
+    ├── BooksList # This Functional component creates the view that contains the bookshelves and open search button
+    ├── BookShelves # This Functional component creates the bookshelf container
+    ├── BookShelf.js # This Functional component creates each bookshelf
+    ├── Book.js # This Functional component creates the list of books on each shelf
+    ├── BookShelfChanger.js # This Functional component creates the dropdown to change allow the user to move the book to another shelf
+    ├── OpenSearch.js # This Functional component is a button to redirect the user to the books search page
+    ├── BooksSearch.js # This Functional component creates the view that contains the book search bar, books search close button and book search results
+    ├── BookSearchBar.js # This Functional component creates the search bar, which contains the close button and input search field
+    ├── BooksSearchClose.js # This Functional component redirects the user back to the books list view
+    ├── BooksSeachInput.js # This Functional component receives a search term, which is use to try and retrieve search results
+    ├── BookSearchResults.js # This Functional component lists all the results that are retrieved from the user search input  
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
     ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── icons # Helpful images for your app. Use at your discretion.
