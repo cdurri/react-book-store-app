@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Book from './Book';
 
-const BookShelf = ({ shelves, shelfkeys, books, shelfupdate, selectupdate }) => (
+const shelves = ['Currently Reading', 'Want to Read', 'Read'];
+const shelfkeys = ['currentlyReading', 'wantToRead', 'read'];
+
+const BookShelf = ({ books, shelfupdate, selectupdate }) => (
   <div>
     {shelves.map((shelf, index) => {
       return (
@@ -20,8 +23,6 @@ const BookShelf = ({ shelves, shelfkeys, books, shelfupdate, selectupdate }) => 
 )
 
 BookShelf.propTypes = {
-  shelves: PropTypes.array.isRequired,
-  shelfkey: PropTypes.string,
   books: PropTypes.array.isRequired,
   shelfupdate: PropTypes.func.isRequired
 }
