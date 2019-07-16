@@ -13,7 +13,7 @@ const Book = ({ books, shelfkey, shelfupdate, value, selectupdate })  => (
             <BookShelfChanger books={book} shelfupdate={shelfupdate} value={shelfkey} selectupdate={selectupdate} />
           </div>
           <div className="book-title">{book.title}</div>
-          <div className="book-authors">{book.authors}</div>
+          <div className="book-authors">{book.authors.join(', ')}</div>
         </div>
       </li>
     )
