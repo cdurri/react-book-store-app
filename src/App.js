@@ -9,7 +9,6 @@ class BooksApp extends Component {
 
   state = {
     booksList: [],
-    booksSearch: [],
     query: '',
     value: 'none'
   }
@@ -20,20 +19,6 @@ class BooksApp extends Component {
         booksList: data
       })
     })
-  }
-
-  booksSearch = query => {
-    if(query !== '') {
-      BooksAPI.search(query).then(data => {
-        this.setState({
-          booksSearch: data
-        })
-      })
-    } else {
-      this.setState({
-        booksSearch: []
-      })
-    }
   }
 
   shelfUpdate = (book, shelf) => {
@@ -59,7 +44,7 @@ class BooksApp extends Component {
           <BooksList books={this.state.booksList} shelfupdate={this.shelfUpdate} selectupdate={this.selectUpdate} />
         )} />
         <Route path='/search' render={() => (
-          <BooksSearch books={this.state.booksSearch} search={this.booksSearch} shelfupdate={this.shelfUpdate} value={this.state.value} selectupdate={this.selectUpdate} />
+          <BooksSearch search={this.booksSearch} shelfupdate={this.shelfUpdate} value={this.state.value} selectupdate={this.selectUpdate} />
         )} />
       </div>
     )
