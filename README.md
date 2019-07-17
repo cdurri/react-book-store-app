@@ -34,7 +34,7 @@ To get started developing right away:
     ├── Book.js # This Functional component creates the list of books on each shelf
     ├── BookShelfChanger.js # This Functional component creates the dropdown to change allow the user to move the book to another shelf
     ├── OpenSearch.js # This Functional component is a button to redirect the user to the books search page
-    ├── BooksSearch.js # This Functional component creates the view that contains the book search bar, books search close button and book search results
+    ├── BooksSearch.js # This Class based component creates the view that contains the book search bar, books search close button and book search results
     ├── BookSearchBar.js # This Functional component creates the search bar, which contains the close button and input search field
     ├── BooksSearchClose.js # This Functional component redirects the user back to the books list view
     ├── BooksSeachInput.js # This Functional component receives a search term, which is use to try and retrieve search results
