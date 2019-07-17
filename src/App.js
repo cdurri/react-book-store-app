@@ -9,7 +9,6 @@ class BooksApp extends Component {
 
   state = {
     booksList: [],
-    query: '',
     value: 'none'
   }
 
