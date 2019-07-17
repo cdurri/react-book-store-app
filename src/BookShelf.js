@@ -9,7 +9,7 @@ const BookShelf = ({ books, shelfupdate, selectupdate }) => (
   <div>
     {shelves.map((shelf, index) => {
       return (
-        <div className='bookshelf' key={shelf} id={shelfkeys[index]}>
+        <div className='bookshelf'>
           <h2 className='bookshelf-title'>{shelf}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">

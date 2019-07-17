@@ -23,11 +23,23 @@ class BooksSearch extends Component {
     }
   }
 
+  matchedBooks() {
+    return this.state.booksSearch.length > 0 && this.state.booksSearch.map((booksSearchItem) => {
+      this.props.booksList.filter((booksListItem) => {
+          if(booksSearchItem.id === booksListItem.id) {
+            booksSearchItem.shelf = booksListItem.shelf;
+          };
+          return booksListItem;
+      })
+      return booksSearchItem;
+    })
+  }
+
   render() {
     return (
       <div className='search-books'>
         <BooksSearchBar search={this.booksSearch} />
-        <BooksSearchResults books={this.state.booksSearch} shelfupdate={this.props.shelfupdate} value={this.props.value} selectupdate={this.props.selectupdate} />
+        <BooksSearchResults booksList={this.props.booksList} books={this.matchedBooks()} shelfupdate={this.props.shelfupdate} selectupdate={this.props.selectupdate} />
       </div>
     )
   }

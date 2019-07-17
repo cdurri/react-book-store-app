@@ -9,7 +9,6 @@ class BooksApp extends Component {
 
   state = {
     booksList: [],
-    value: 'none'
   }
 
   componentDidMount() {
@@ -43,7 +42,7 @@ class BooksApp extends Component {
           <BooksList books={this.state.booksList} shelfupdate={this.shelfUpdate} selectupdate={this.selectUpdate} />
         )} />
         <Route path='/search' render={() => (
-          <BooksSearch search={this.booksSearch} shelfupdate={this.shelfUpdate} value={this.state.value} selectupdate={this.selectUpdate} />
+          <BooksSearch booksList={this.state.booksList} search={this.booksSearch} shelfupdate={this.shelfUpdate} selectupdate={this.selectUpdate} />
         )} />
       </div>
     )
