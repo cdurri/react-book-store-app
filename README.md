@@ -20,6 +20,7 @@ To get started developing right away:
 ```bash
 ├── README.md - This file.
 ├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
+├── CONTRIBUTING.md # Information about contributing to the project
 ├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
 ├── package-lock.json # this provides a single representation of the dependency tree such that teammates, deployments, and continuous integration are guaranteed to install exactly the same dependencies.
 ├── public
