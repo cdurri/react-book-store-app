@@ -12,7 +12,7 @@ and using Reacts **state management** functionality. The project includes a back
 
 To get started developing right away:
 
-* clone the project to your local machine using the following command on the command line: `git clone https://github.com/cdurri/react-myreads-app.git`
+* clone the project to your local machine using the following command on the command line: `git clone https://github.com/cdurri/react-book-store-app.git`
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
 
