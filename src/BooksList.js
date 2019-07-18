@@ -6,7 +6,7 @@ import OpenSearch from './OpenSearch';
 const BooksList = ({ books, shelfupdate, selectupdate }) => (
   <div className='list-books'>
     <div className='list-books-title'>
-      <h1>MyReads</h1>
+      <h1>BookStore</h1>
     </div>
     <BookShelves books={books} shelfupdate={shelfupdate} selectupdate={selectupdate} />
     <OpenSearch />
