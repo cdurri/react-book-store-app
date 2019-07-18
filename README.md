@@ -1,6 +1,6 @@
-# MyReads: A Book Search And Categorisation App
+# BookStore: A Book Search And Categorisation App
 
-**MyReads** is a bookshelf categorisation and book search application. The app has two main views, the **booklist (bookshelves)** view, and the **book search** view. The app enables the user to perform a search
+**BookStore** is a bookshelf categorisation and book search application. The app has two main views, the **booklist (bookshelves)** view, and the **book search** view. The app enables the user to perform a search
 on the search page for books that are stored on the backend server. When books are retrieved from a search, they can then be selected and added to one of the bookshelf categories. The bookshelf
 categories are **'Currently Reading'**, **'Want to Read'** and **'Read'**. Once a book has been placed on one of the shelves (categories), it can then be moved from one shelf (category) to another shelf (category).
 This movement can be done by selecting the desired shelf (category) from the book changer **dropdown list** that is present on every book.
