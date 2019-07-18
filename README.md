@@ -1,4 +1,4 @@
-# MyReads Project
+# MyReads: A Book Search And Categorisation App
 
 **MyReads** is a bookshelf categorisation and book search application. The app has two main views, the **booklist (bookshelves)** view, and the **book search** view. The app enables the user to perform a search
 on the search page for books that are stored on the backend server. When books are retrieved from a search, they can then be selected and added to one of the bookshelf categories. The bookshelf
@@ -49,8 +49,6 @@ To get started developing right away:
     ├── index.css # Global styles. You probably won't need to change anything here.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
-
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
 
 ## Backend Server
 
