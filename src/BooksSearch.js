@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as BooksAPI from './BooksAPI'
 import PropTypes from 'prop-types';
+import { debounce } from 'throttle-debounce';
 import BooksSearchBar from './BooksSearchBar';
 import BooksSearchResults from './BooksSearchResults';
 
@@ -9,7 +10,7 @@ class BooksSearch extends Component {
     booksSearch: []
   }
 
-  booksSearch = query => {
+  booksSearch = debounce(250, false, query => {
     if(query !== '') {
       BooksAPI.search(query).then(data => {
         this.setState({
@@ -21,7 +22,7 @@ class BooksSearch extends Component {
         booksSearch: []
       })
     }
-  }
+  })
 
   matchedBooks() {
     return this.state.booksSearch.length > 0 && this.state.booksSearch.map((booksSearchItem) => {
